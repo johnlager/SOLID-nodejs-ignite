@@ -13,7 +13,7 @@ class ListAllUsersUseCase {
     const isUserAdmin = user.admin;
 
     if (!isUserAdmin) {
-      throw new Error("User is not an admin");
+      throw new Error("User has no permissions");
     }
     const usersList = this.usersRepository.list();
 
